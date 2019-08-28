@@ -9,15 +9,11 @@
 
 <h1 >掲示板</h1>
 
-<form>
-<span>名前</span><br>
-<input>
-<br>
-<br>
-<span>コメント</span><br>
-<textarea></textarea>
-<br>
-<button>投稿</button>
+<form th:action="@{/article/insert_comment}" method="post">
+<input type="hidden" name="articleId" th:value="${article.id}">
+名前:<input type="text" name="name"><br>
+コメント:<input type="text" name="content"><br>
+<button>コメント投稿</button><br>
 </form>
 <hr>
 

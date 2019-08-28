@@ -14,11 +14,11 @@ public class ArticleDeleteController {
 	private ArticlesRepository article;
 	
 	
-	@RequestMapping("")
+	@RequestMapping("/delete")
 	public String delete(ArticleForm form) {
 		int num = Integer.parseInt(form.getId());
 		article.delete(num);
-		return "/bbs";
+		return "redirect:/bbs";
 	}
 	
 

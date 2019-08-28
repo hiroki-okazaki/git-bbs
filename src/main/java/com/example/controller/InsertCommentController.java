@@ -11,7 +11,7 @@ import com.example.form.CommentForm;
 import com.example.repository.CommentRepository;
 
 @Controller
-@RequestMapping("/insertComment")
+@RequestMapping("/insert")
 public class InsertCommentController {
 	
 	@Autowired

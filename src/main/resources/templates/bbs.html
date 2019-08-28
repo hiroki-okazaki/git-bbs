@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<h1>掲示板</h1>
+<h1 >掲示板</h1>
 
 <form>
 <span>名前</span><br>
@@ -22,8 +22,11 @@
 <hr>
 
 
+<div th:each="article : ${articleList}">
+<span>名前</span>:<span th:text="${article.name}">名前を表示する</span>
+<span>投稿記事</span>:<span th:text="${article.content}">投稿記事を表示する</span>
+</div>
 
-<span>名前</span>:<span>名前を表示する</span>
 <br>
 <br>
 <span>コメント</span>:<span>コメント表示する</span>

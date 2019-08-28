@@ -9,12 +9,12 @@
 
 <h1 >掲示板</h1>
 
-<form th:action="@{/article/insert_comment}" method="post">
-<input type="hidden" name="articleId" th:value="${article.id}">
+<!-- <form th:action="@{/insert/insert_comment}" method="post">
+<input type="hidden" name="articleId" th:value="${article.id}"> -->
 名前:<input type="text" name="name"><br>
 コメント:<input type="text" name="content"><br>
 <button>コメント投稿</button><br>
-</form>
+<!-- </form> -->
 <hr>
 
 
@@ -22,15 +22,20 @@
 <span>ID:</span>:<span th:text="${article.id}">idを表示する</span><br>
 <span>名前:</span>:<span th:text="${article.name}">名前を表示する</span><br>
 <span>投稿記事:</span>:<span th:text="${article.content}">投稿記事を表示する</span><br>
+
+
+<br>
+<br>
+<div th:each="comment : ${article.commentList}">
+<span>コメントID:</span ><span th:text="${comment.id}">IDを表示する</span><br>
+<span>コメント者名:</span><span th:text="${comment.name}">コメント者名を表示する</span><br>
+<span>コメント:</span><span th:text="${comment.content}">コメントを表示する</span>
+<br>
 </div>
 
-<br>
-<br>
-<span>コメント</span>:<span>コメント表示する</span>
-<br>
 <button>コメント</button>
 <button>削除</button>
-
+</div>
 
 
 </body>

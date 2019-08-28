@@ -28,6 +28,11 @@ public class CommentForm {
 	 * 投稿記事ID
 	 */
 	private String articleId;
+	
+	
+	public Integer getIntArticleId() {
+		return Integer.parseInt(articleId);
+	}
 
 	
 	

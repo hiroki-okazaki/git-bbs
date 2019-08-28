@@ -22,7 +22,7 @@ public class ArticleController {
 	@Autowired
 	private CommentRepository commentRepository;
 	
-	@RequestMapping("articleList")
+	@RequestMapping("/articleList")
 	public String articleList(Model model) {
 		
 		List<Article> articleList = articleRepository.findAll();
